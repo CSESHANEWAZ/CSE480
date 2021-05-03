@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<address>       <!-- root tag-->
+    <name>
+        <firstname>Alice</firstname>
+        <lastname>Lee</lastname>
+    </name>
+
+    <email>alee@aol.com</email>
+    <phone>234-456-4231</phone>
+    
+    <birthday>
+        <year>1985</year>
+        <month>05</month>
+        <day>22</day>
+    </birthday>
+</address>

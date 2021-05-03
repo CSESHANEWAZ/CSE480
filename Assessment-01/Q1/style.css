@@ -1,0 +1,83 @@
+.body{
+    font-family: sans-serif;
+    background-position: center;
+    margin-top: 40px;
+    background-color: blue;
+}
+.signup{
+    width: 800px;
+    background-color: rgb(142, 92, 0);
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+}
+.main{
+    background-color: rgb(86, 86, 87);
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    padding: 40px 0px 0px 0px;
+}
+#fname, #lname, #mobile, #email, #months, #days, #years, #file, #pass, #country{
+    padding: 10px 5px 10px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+.name{
+    color: rgb(240, 238, 235);
+    font-size: 18px;
+    padding: 0px 50px 0px 0px;
+}
+.mobile{
+    color: rgb(240, 238, 235);
+    font-size: 18px;
+    padding: 0px 58px 0px 0px;
+}
+.email{
+    color: rgb(240, 238, 235);
+    font-size: 18px;
+    padding: 0px 58px 0px 0px;
+}
+.gender{
+    color: rgb(240, 238, 235);
+    font-size: 18px;
+    padding: 0px 58px 0px 0px;
+}
+.bday{
+    color: rgb(240, 238, 235);
+    font-size: 18px;
+    padding: 0px 60px 0px 0px;
+}
+.file{
+    color: rgb(240, 238, 235);
+    font-size: 18px;
+    padding: 0px 130px 0px 0px;
+}
+.info{
+    color: rgb(240, 238, 235);
+    font-size: 18px;
+    padding: 0px 130px 0px 0px;
+}
+.pass{
+    color: rgb(240, 238, 235);
+    font-size: 18px;
+    padding: 0px 130px 0px 0px;
+}
+.country{
+    color: rgb(240, 238, 235);
+    font-size: 18px;
+    padding: 0px 0px 0px 0px;
+}
+.submit{
+    width: 800px;
+    background-color: rgb(142, 92, 0);
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 0px 0px 15px 15px;
+}
+

@@ -1,0 +1,221 @@
+
+>db.instructors.insert({
+	id: 1001,
+	name: 'RDA',
+	age: 30,
+	dept_name: 'CSE',
+	salary: 70000
+})
+
+>db.instructors.insert({
+	id: 1002,
+	name: 'Ovi',
+	age: 32,
+	dept_name: 'CSE',
+	salary: 60000
+})
+
+>db.instructors.insert({
+	id: 1003,
+	name: 'ABST',
+	age: 28,
+	dept_name: 'EEE',
+	salary: 65000
+})
+
+
+> db.instructors.insert({
+	id: 1004,
+	name: 'Ali',
+	age: 27,
+	dept_name: 'EEE',
+	salary: 50000
+})
+
+
+>db.instructors.insert({
+	id: 1005,
+	name: 'TJ',
+	age: 30,
+	dept_name: 'CSE',
+	salary: 80000
+})
+
+> db.instructors.insert({
+	id: 1006,
+	name: 'ABC',
+	age: 30,
+	dept_name: 'EEE',
+	salary: 75000
+})
+
+> db.instructors.insert({
+	id: 1007,
+	name: 'ASD',
+	age: 35,
+	dept_name: 'PHARMACY',
+	salary: 90000
+})
+
+> db.instructors.insert({
+	id: 1008,
+	name: 'MDH',
+	age: 33,
+	dept_name: 'BBA',
+	salary: 40000
+})
+
+
+
+> db.instructors.find().pretty()
+
+> db.instructors.find({salary: {$gt: 70000}}).pretty()
+
+> db.instructors.find({salary: {$gte: 70000}}).pretty()
+
+> db.instructors.find({salary: {$lt: 65000}}).pretty()
+
+> db.instructors.find({salary: {$lte: 65000}}).pretty()
+
+> db.instructors.find({salary: {$ne: 65000}}).pretty()
+
+> db.instructors.find ({
+	salary: {$lte: 65000},
+	dept_name: 'CSE'
+	}).pretty()
+	
+> db.instructors.find({
+	salary: {$gte: 60000},
+	dept_name: {$ne: 'EEE'}
+}).pretty()
+
+
+=> and operation
+
+> db.instructors.find({
+	$and: [
+		{salary: {$gte: 60000}},
+		{dept_name: {$ne: 'EEE'}}
+	]
+}).pretty()
+
+
+=> OR operation
+
+> db.instructors.find({
+	$or: [
+		{salary: {$gte: 60000}},
+		{dept_name: {$ne: 'EEE'}}
+	]
+}).pretty()
+
+
+=> AND and OR together
+
+> db.instructors.find({
+	age: {$gt: 28},
+	$or: 
+	[
+		{dept_name: {$ne: 'EEE'}},
+		{salary: {$gte: 50000}}
+	]
+}).pretty()
+
+
+
+> db.instructors.find({
+	age: {$gt: 28},
+	$and: 
+	[
+		{dept_name: {$ne: 'EEE'}},
+		{salary: {$gte: 50000}}
+	]
+}).pretty()
+
+
+
+> db.instructors.find({
+	$and: [
+	
+		{{
+			salary: {$gt: 65000}
+		},
+		
+		{
+			$or:[
+				{dept_name: 'CSE'},
+				{dept_name: 'EEE'}
+			]
+		}
+	]
+}).pretty()
+
+
+
+=> update document
+
+> db.instructors.update(
+	{id: 1008},
+	{$set: {salary: 50000}}
+)
+
+
+> db.instructors.update(
+	{id: 1008},
+	{$set: {email: 'mhasan@university.edu'}}
+)
+
+
+> db.instructors.update(
+	{id: 1007},
+	{$set: {email: 'rashed@university.edu'}}
+)
+
+> db.instructors.update(
+	{dept_name: 'CSE'},
+	{$set: {dept_name: 'CSIT'}},
+	{multi: true}
+)
+
+
+=> delete document
+
+> db.instructors.remove(
+	{id: 1004}, 1
+)
+
+
+=> projection
+
+> db.instructors.find(
+	{},
+	{"name":1, "email":1, _id:0}
+).pretty()
+
+
+> db.instructors.find(
+	{salary: {$gt: 70000}},
+	{_id:0, 'name':1, 'dept_name':1, 'salary':1}
+).pretty()
+
+
+
+
+=> limit records
+
+> db.instructors.find().limit(4).pretty()
+
+> db.instructors.find().limit(4).skip(2).pretty()
+
+
+
+=> sort records
+
+> db.instructors.find().sort({age: 1}).pretty()
+
+> db.instructors.find().sort({age: -1}).pretty()
+
+> db.instructors.find(
+	{salary: {$gt: 70000}},
+	{_id:0, 'name':1, 'dept_name':1, 'salary':1}
+).sort({salary: 1})

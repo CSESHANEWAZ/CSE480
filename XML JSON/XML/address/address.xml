@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<address>       <!-- root tag-->
+
+    <name>Alice Lee</name>
+    <email>alee@aol.com</email>
+    <phone>234-456-4231</phone>
+    <birthday>1985-05-22</birthday>
+    
+</address>

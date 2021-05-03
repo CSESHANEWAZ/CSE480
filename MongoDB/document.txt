@@ -1,0 +1,101 @@
+1. Create database
+>use myDB
+
+2. Create collection
+>db.createCollection("mycollection")
+>db.createCollection("books")
+>db.createCollection("instructors")
+>db.createCollection("students")
+>db.createCollection("demoCollection")
+
+
+3. display list of collections
+>show collections
+
+
+4. drop collection
+>db.demoCollection.drop()
+
+
+5.	insert document into a collection
+
+>db.mycollection.insert({
+	title: 'MongoDB Overview',
+	description: 'MongoDB is nosql database',
+	tags: ['mongodb', 'database', 'NoSql'],
+	likes: 100
+})
+
+
+
+>db.books.insert({
+	title: 'MongoDB: The Definitive Guide',
+	author: 'Kristina Chodorow',
+	edition: 2010
+})
+
+
+
+>db.students.insert({
+	id: 101,
+	name: 'Robert Harry',
+	dept_name: 'CSE',
+	email: 'robert@university.edu'
+})
+
+>db.students.insert({
+	id: 102,
+	name: 'Peter Lee',
+	dept_name: 'CSE',
+	email: 'plee@university.edu'
+})
+
+>db.students.insert({
+	id: 103,
+	name: 'Jonathan Edwards',
+	dept_name: 'EEE',
+	email: 'jedwards@university.edu'
+})
+
+>db.students.insert({
+	id: 104,
+	name: 'Joe Kim',
+	dept_name: 'ETE',
+	email: 'jkim@university.edu'
+})
+
+>db.students.insert({
+	id: 105,
+	name: 'Devid Letty',
+	dept_name: 'Pharmacy',
+	email: 'dletty@university.edu'
+})
+
+>db.students.insert({
+	id: 106,
+	name: 'Devid Moris',
+	dept_name: 'English',
+	email: 'moris@university.edu',
+	mobile: '+89345842190'
+})
+
+>db.students.insert({
+	id: 106,
+	name: 'Jenny Hen',
+	dept_name: 'Civil',
+	CGPA: '4.88',
+	email: 'jenny@university.edu',
+	mobile: '+89342746238'
+})
+
+
+6. display document from students collection
+
+>db.students.find()
+
+>db,students.find().pretty()
+
+7. check equality
+
+> db.students.find({dept_name: 'CSE'}).pretty()
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bank>
+    <BankAccount category="personal">
+        <account_number>12345</account_number>
+        <account_type>checking</account_type>
+        <opendate>15/04/2012</opendate>
+        <balance>2340000.50</balance>
+        <accountholder>
+            <firstname>Muhammad</firstname>
+            <lastname>Akbor</lastname>
+        </accountholder>
+    </BankAccount>
+    <BankAccount category="savings">
+        <account_number>12346</account_number>
+        <account_type>fixed</account_type>
+        <opendate>11/04/2016</opendate>
+        <balance>2450000.50</balance>
+        <accountholder>
+            <firstname>Rashed</firstname>
+            <lastname>Amin</lastname>
+        </accountholder>
+    </BankAccount>
+    <BankAccount category="savings">
+        <account_number>12347</account_number>
+        <account_type>deposit</account_type>
+        <opendate>18/04/2018</opendate>
+        <balance>2500000.20</balance>
+        <accountholder>
+            <firstname>Muhammad</firstname>
+            <lastname>Abdullah</lastname>
+        </accountholder>
+    </BankAccount>
+</Bank>
