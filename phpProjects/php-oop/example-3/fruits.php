@@ -30,15 +30,24 @@
 
 
     //create an object
-    $obj = new Fruit();
+    $obj1 = new Fruit();
+    $obj2 = new Fruit();
 
-    $obj -> name = "Apple";
-    $obj -> color = "red";
+    $obj1 -> name = "Apple";
+    $obj1 -> color = "red";
 
-    $obj -> set_name($obj -> name);
-    $obj -> set_color($obj -> color);
+    $obj2 -> name = "Banana";
+    $obj2 -> color = "yellow";
 
-    echo $obj -> get_name() . " is " . $obj -> get_color() . " color." ;
+    $obj1 -> set_name($obj1 -> name);
+    $obj1 -> set_color($obj1 -> color);
 
+    $obj2 -> set_name($obj2 -> name);
+    $obj2 -> set_color($obj2 -> color);
+
+
+
+    echo $obj1 -> get_name() . " is " . $obj1 -> get_color() . " color.<br>" ;
+    echo $obj2 -> get_name() . " is " . $obj2 -> get_color() . " color." ;
 
 ?>
