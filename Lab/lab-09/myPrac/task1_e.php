@@ -20,6 +20,7 @@
             echo "Area, a = w*l = " . ($this -> width * $this -> height) . "</br>";
         }
     }
+    
 
     $obj1 = new Rectangle(25, 5);
     $obj2 = new Rectangle(10, 8);
