@@ -5,46 +5,63 @@
         private $name;
         private $id;
         private $cgpa;
-        private $total_cgpa;
-        private $avg_cgpa;
 
-        function __construct($name, $id, $cgpa)
+
+        //mutator method
+        public function set_name($name)
         {
             $this -> name = $name;
+        }
+        public function set_id($id)
+        {
             $this -> id = $id;
+        }
+        public function set_cgpa($cgpa)
+        {
             $this -> cgpa = $cgpa;
         }
 
-        public function show_info()
+        //accessor method
+        public function get_info()
         {
             echo "Name: " . $this-> name . "</br>";
             echo "ID: " . $this -> id . "</br>";
             echo "CGPA: " . $this -> cgpa . "</br>";
         }
 
-        public function get_avg($cgpa1, $cgpa2)
+        public function get_cgpa()
         {
-            $this -> total_cgpa = $cgpa1 + $cgpa2;
-            $this -> avg_cgpa = ($this -> total_cgpa) / 2;
-            echo "Average cgpa = " . $this -> avg_cgpa . "</br>";
+            return $this -> cgpa;
         }
     }
 
 
     //create objects
-    $obj1 = new Student("Amal Chamlee", "2016-3-60-030", 3.65);
-    $obj2 = new Student("David Byer", "2018-3-60-044", 3.85);
+    $obj1 = new Student;
+    $obj2 = new Student;
 
     echo "<h2>Student Info:</h2> </br>";
 
     echo "Student-1 => </br>";
-    $obj1 -> show_info();
+    $obj1 -> set_name("Berlin");
+    $obj1 -> set_id("2016-3-60-030");
+    $obj1 -> set_cgpa(3.85); 
+
+    $obj1 -> get_info();
 
     echo "</br>";
 
     echo "Student-2 => </br>";
-    $obj2 -> show_info();
+    $obj2 -> set_name("Tokyo");
+    $obj2 -> set_id("2016-3-60-055");
+    $obj2 -> set_cgpa(3.55); 
+
+    $obj2 -> get_info();
 
     echo "</br>";
-    $obj1 -> get_avg(3.65, 3.85);
+
+    $total_cgpa = $obj1 -> get_cgpa() + $obj2 -> get_cgpa();
+    $avg_cgpa = $total_cgpa / 2;
+
+    echo "Average cgpa = " . $avg_cgpa. "</br>";
 ?>
