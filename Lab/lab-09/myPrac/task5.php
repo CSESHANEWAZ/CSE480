@@ -27,7 +27,9 @@
 
     //create object
     $obj1 = new Box(5.55, 4.60, 8.50);
+    $obj2 = new Box(3.33, 5.55, 8.88);
 
-    echo "Surface Area of a Box, SA= " . $obj1 -> getArea() . "</br>";
+    echo "Surface Area of a Box1, SA= " . $obj1 -> getArea() . "</br>";
+    echo "Surface Area of a Box2, SA= " . $obj2 -> getArea() . "</br>";
 
 ?>
