@@ -1,6 +1,7 @@
 <?php
 
-    //parent class    
+
+    //parent class   
     class Domain
     {
         //static method
